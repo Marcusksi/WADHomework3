@@ -1,8 +1,5 @@
 <template>
-  <div class="fetch">
-    <get-data :posts="posts"/>
-  </div>
-
+  <get-data :posts="posts"/>
 </template>
 
 

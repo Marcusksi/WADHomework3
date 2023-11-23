@@ -1,17 +1,29 @@
 <template>
+<body>
     <section id = "sel">
-        <div class="post-list box" v-for="post in posts"   :key="post.index">
-            <div class="post">
+        <div class="box" v-for="post in posts"   :key="post.index">
+            <ul class="post">
                 <li><a class="profile" href="#"><img :src="require(`../assets/${post.profile}`)" alt="Profile picture" :width="60"></a></li>
-                <li><p class="date">{{ post.creationTime}}</p></li>
-                <!--<a class="picture" href="res/images/delta.png"><img src="res/images/delta.png" width="75%" alt="Post picture"></a>
-                <p>University of Tartu Delta Centre</p>
-                <a class="reaction" href="#"><img src="res/images/like_logo2.png" width="30px" alt="Reaction picture"></a>
+                <li><p class="date">{{post.creationTime}}</p></li>
+                <!--<a v-if="post.picture" class="picture" :href="require(`${post.picture}`)"><img :src="require(`${post.picture}`)" alt="Post picture"></a>
+                
+                <a v-if="`${post.picture}`" class="picture" :href="post.picture"><img :src="require(`${post.picture}`)" alt="Post picture"></a>
                 -->
-            </div>
+                <p>{{post.body}}</p>
+                <img class="reaction" :src="require(`../assets/${post.reaction}`)" :width="30" alt="Reaction picture">
+            </ul>
         </div> 
     </section>
+</body>
 </template>
+
+
+<!--<style lang="css" scoped src="../css/indexStyle.css"> </style>-->
+<style>
+@import '../css/indexStyle.css';
+@import '../css/style.css';
+</style>
+
 
 
 <script>
@@ -21,18 +33,3 @@ export default {
     props: ["posts"]
 }
 </script>
-
-<style scoped>
-body {
-    position: relative;
-}
-
-.post {
-    width: 80%;
-    position: relative;
-    padding: 10px;
-    margin: 10px auto;
-    border: 1px solid gray;
-    text-align: left;
-}
-</style>
