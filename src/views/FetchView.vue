@@ -10,9 +10,15 @@ import getData from "@/components/getData.vue";
 
 export default {
   name: "FetchView",
-  components: { getData },
-
-}
+  components: {
+    getData
+  },
+  methods: {
+    ResetLikes: function() {
+      this.$store.dispatch("ResetLikesAct")
+    }
+  }
+};
 </script>
 
 <style scoped>
