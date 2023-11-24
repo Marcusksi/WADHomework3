@@ -115,21 +115,16 @@ export default createStore({
     }
     ]
   },
-  getters: {},
+  getters: {
+    getPostById: state => id => {
+      return state.posts.find(post => post.id === id);
+    },
+  },
   mutations: {
     ResetLikes: state => {
       state.posts.forEach(post => {
           post.likes = 0;
       })
-    },
-     IncreaseLike:  state => {
-      state.posts.forEach(post => {//vb ebavajalik
-        console.log(post)
-        /*if(post==postId)
-          post.likes++;
-          */
-      })
-      
     },
   },
   actions: {
@@ -138,9 +133,6 @@ export default createStore({
           act.commit("ResetLikes")
       }, 500)
     },
-      IncreaseLikeAct({commit}, postId){
-        commit("IncreaseLike", postId);//vb ebavajalik
-      },
   },
   modules: {},
 });
