@@ -5,10 +5,7 @@
             <ul class="post">
                 <li><a class="profile" href="#"><img :src="require(`../assets/${post.profile}`)" alt="Profile picture" :width="60"></a></li>
                 <li><p class="date">{{post.creationTime}}</p></li>
-                <!--<a v-if="post.picture" class="picture" :href="require(`${post.picture}`)"><img :src="require(`${post.picture}`)" alt="Post picture"></a>
-                
-                <a v-if="`${post.picture}`" class="picture" :href="post.picture"><img :src="require(`${post.picture}`)" alt="Post picture"></a>
-                -->
+                <a v-if= "post.picture != ''" class="aPicture" v-bind:href=post.picture><img v-bind:src=post.picture class="picture" alt="Post picture"></a>
                 <p>{{post.body}}</p>
                 <button @click="IncreaseLike(post)"><img class="reaction" :src="require(`../assets/${post.reaction}`)" :width="30" alt="Reaction picture"></button>
                 <p>{{post.likes}}</p>
