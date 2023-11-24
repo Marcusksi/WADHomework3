@@ -124,9 +124,12 @@ export default createStore({
     },
      IncreaseLike:  state => {
       state.posts.forEach(post => {//vb ebavajalik
-        if(post==postId)
+        console.log(post)
+        /*if(post==postId)
           post.likes++;
+          */
       })
+      
     },
   },
   actions: {
@@ -136,7 +139,7 @@ export default createStore({
       }, 500)
     },
       IncreaseLikeAct({commit}, postId){
-        commit(IncreaseLike, postId);//vb ebavajalik
+        commit("IncreaseLike", postId);//vb ebavajalik
       },
   },
   modules: {},
