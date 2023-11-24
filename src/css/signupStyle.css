@@ -49,7 +49,7 @@
     flex-direction: row;
 }
 
-.box {
+.subox {
     display: flex;
     flex-direction: column;
     align-items: end;

@@ -3,7 +3,7 @@
         <section>
             <div class="comp">
                 <form action= "index.html" method="get" class="form">
-                    <div class="box">
+                    <div class="subox">
                         <div class="div1">
                             <p class="text">Email</p>
                             <input class="input" type="text" name="email" placeholder="Email" required><br>
