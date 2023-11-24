@@ -10,7 +10,7 @@
                 <a v-if="`${post.picture}`" class="picture" :href="post.picture"><img :src="require(`${post.picture}`)" alt="Post picture"></a>
                 -->
                 <p>{{post.body}}</p>
-                <button v-on:click="IncreaseLike"><img class="reaction" :src="require(`../assets/${post.reaction}`)" :width="30" alt="Reaction picture"></button>
+                <button @click="IncreaseLike(post)"><img class="reaction" :src="require(`../assets/${post.reaction}`)" :width="30" alt="Reaction picture"></button>
                 <p>{{post.likes}}</p>
             </ul>
         </div> 
@@ -35,6 +35,11 @@ button{
 
 export default {
     name: "getData",
-    props: ["posts"]
+    props: ["posts"],
+    methods: {
+    IncreaseLike(post) {
+      post.likes++; // Increment the likes of the specific post
+    }
+  }
 }
 </script>

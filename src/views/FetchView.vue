@@ -25,7 +25,11 @@ export default {
   methods: {
     ResetLikes: function() {
       this.$store.dispatch("ResetLikesAct")
-    }
+    },
+    IncreaseLike(postId) {
+      this.$store.dispatch("IncreaseLikeAct", postId)//vb pole vaja
+    },
+    
   }
 };
 </script>
