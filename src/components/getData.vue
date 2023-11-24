@@ -32,9 +32,20 @@ button{
 
 
 <script>
-
 export default {
+    name: "getData",
+    data: function() {
+        return {
+    }},
+    computed: {
+    posts(){
+        return this.$store.state.posts
+    },
+    }
+}
+/**export default {
     name: "getData",
     props: ["posts"]
 }
+**/
 </script>
