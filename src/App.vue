@@ -2,28 +2,25 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/form">Form Val.</router-link> |
-    <router-link to="/fetch">FetchAPI</router-link> |
-    <router-link to="/faq">FAQ</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/fetch">FetchAPI</router-link>
   </nav>
 
   <router-view />
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <AppFooter/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppFooter
   }
 }
 </script>
 
-<!--<style>
+<style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,5 +29,16 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+nav{
+  padding-bottom: 10px;
+}
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #4272b9;
+}
 </style>
--->
+

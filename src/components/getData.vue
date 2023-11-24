@@ -10,7 +10,8 @@
                 <a v-if="`${post.picture}`" class="picture" :href="post.picture"><img :src="require(`${post.picture}`)" alt="Post picture"></a>
                 -->
                 <p>{{post.body}}</p>
-                <img class="reaction" :src="require(`../assets/${post.reaction}`)" :width="30" alt="Reaction picture">
+                <button v-on:click="IncreaseLike"><img class="reaction" :src="require(`../assets/${post.reaction}`)" :width="30" alt="Reaction picture"></button>
+                <p>{{post.likes}}</p>
             </ul>
         </div> 
     </section>
@@ -22,6 +23,10 @@
 <style>
 @import '../css/indexStyle.css';
 @import '../css/style.css';
+button{
+    background: none;
+    border: none;
+}
 </style>
 
 
