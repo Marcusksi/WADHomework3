@@ -64,7 +64,7 @@ export default createStore({
         "profile": "profile_icon.png",
         "name": "Aidan Willett",
         "creationTime": "30.05.2023",
-        "picture": "https://scontent-hel3-1.xx.fbcdn.net/v/t39.30808-6/400424406_1065565517756944_5882585082198097504_n.jpg?stp=cp6_dst-jpg&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=APbApFeIFr0AX96RVCw&_nc_ht=scontent-hel3-1.xx&oh=00_AfD7jxYK4vMiC6osTGpwuI0Owien6M-TNuiu5Md1AUxIHA&oe=65500DF8",
+        "picture": "https://scontent-hel3-1.xx.fbcdn.net/v/t39.30808-6/405837331_1075838366729659_6405900484321895249_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=AiqLA32JZRMAX8jNKDe&_nc_ht=scontent-hel3-1.xx&oh=00_AfDwve_BlSWFjm1Mrv0ANOtCngkwK2c5UvmkFNSKbwodbQ&oe=6564DFC4",
         "body": "Guys, here's today's lunch special. Join me if you can.",
         "reaction": "like_logo2.png",
         "likes": 0
