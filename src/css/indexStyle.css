@@ -29,8 +29,9 @@ section {
     cursor: pointer;
 }
 
-.reactionAnimation {
+.reactionAnimation:active {
     animation: likeUpDown 0.4s linear 0.4;
+    cursor: pointer;
   }
   
 @keyframes likeUpDown {
@@ -87,4 +88,18 @@ li ~ p {
 .name{
     color: black;
     text-decoration: blink;
+}
+
+
+.likeBox {
+    display : flex;
+    flex-direction : row;
+    margin-right: 30px;
+}
+
+.likeText {
+    margin-left: auto;
+    font-size: 20px;
+    margin-top: 0;
+    
 }
