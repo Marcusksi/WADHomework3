@@ -32,5 +32,12 @@ margin-right:  10px;
 color: white;
 border-radius: 20px;
 }
+button:hover{
+  cursor: pointer;
+  background-color:  rgb(28, 143, 143);
+}
+button:active{
+  background-color:  rgb(22, 116, 116);
+}
 </style>
 

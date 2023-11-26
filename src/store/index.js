@@ -12,7 +12,7 @@ export default createStore({
         "picture": "",
         "body": "I'm here, where is everybody?",
         "reaction": "like_logo2.png",
-        "likes": 0
+        "likes": 3
     },
     {
         "userId": 2,
@@ -34,7 +34,7 @@ export default createStore({
         "picture": "https://tartu.ee/sites/default/files/field/image/delta.jpg",
         "body": "It's in UT Delta Centre building, Narva mnt 18, you can't miss it.",
         "reaction": "like_logo2.png",
-        "likes": 0
+        "likes": 58
     },
     {
         "userId": 2,
@@ -45,7 +45,7 @@ export default createStore({
         "picture": "",
         "body": "Where is our next lecture? I don't know the city well enough.",
         "reaction": "like_logo2.png",
-        "likes": 0
+        "likes": 15
     },
     {
         "userId": 2,
@@ -56,7 +56,7 @@ export default createStore({
         "picture": "",
         "body": "Oh, I seem to be a little bit late to join you guys.",
         "reaction": "like_logo2.png",
-        "likes": 0
+        "likes": 1
     },
     {
         "userId": 4,
@@ -89,7 +89,7 @@ export default createStore({
         "picture": "",
         "body": "Welcome to our new page!",
         "reaction": "like_logo2.png",
-        "likes": 0
+        "likes": 218
     },
     {
         "userId": 1,
@@ -100,7 +100,7 @@ export default createStore({
         "picture": "",
         "body": "Hello!",
         "reaction": "like_logo2.png",
-        "likes": 0
+        "likes": -2
     },
     {
         "userId": 4,

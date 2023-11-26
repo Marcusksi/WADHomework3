@@ -2,7 +2,7 @@
     <body class="signUp">
         <section>
             <div class="comp">
-                <form name="form1" action="index.html" method="get" class="form">
+                <form name="form1" action="index.html" method="get" class="form" @submit="onSubmitMethod" >
                     <div class="subox">
                         <div class="div1">
                             <p class="text">Email</p>
@@ -10,11 +10,11 @@
                         </div>
                         <div class="div1">
                             <p class="text">Password</p>
-                            <input v-model="password" @input="CheckPassword" class="input" type="password" name="password" placeholder="Password" required><br>
+                            <input v-model="password" class="input" type="password" name="password" placeholder="Password" required><br>
                         </div>
                         <p v-if="errorMessage" style="color:darkred">{{ errorMessage }}</p>
                     </div>
-                    <input class="signup_btn" type="submit" value="Signup">
+                    <input class="signup_btn" v-on:click="passwordClick()" type="submit" value="Signup" >
                 </form>
             </div>
         </section>
@@ -39,6 +39,21 @@
 
         
         methods: {
+            passwordClick() {
+                let errorM = this.CheckPassword();
+                this.errorMessage = errorM;
+            },
+            
+  
+            onSubmitMethod(e) {
+                /*let sighForm = document.documentElement.getElementsByClassName("form");*/
+                if (this.CheckPassword() != '' || this.password == '') {
+                    e.preventDefault();
+                }
+            },
+
+            
+
             CheckPassword() {
                 
                 let length = /^\w{8,14}$/;
@@ -52,19 +67,18 @@
 
                 if ((!length.test(this.password) || !upper.test(this.password) || !lower.test(this.password) ||
                         !number.test(this.password) || !startUp.test(this.password) || !special.test(this.password)) && this.password !== '') {
-                    this.errorMessage = 'Password invalid: \n';
-                    if (this.password.length < 8) this.errorMessage += 'Password length should be at least 8 characters. \n';
-                    if (this.password.length > 14) this.errorMessage += 'Password length should be at most 14 characters. \n';
-                    if (!/(.*[A-Z].*)/.test(this.password)) this.errorMessage += 'Password should include at least one uppercase alphabet character. \n';
-                    if (!/(.*[a-z].*){2,}/.test(this.password)) this.errorMessage += 'Password should include at least two lowercase alphabet character. \n';
-                    if (!/([0-9])/.test(this.password)) this.errorMessage += 'Password should include at least one numeric value. \n';
-                    if (!/(^[A-Z])/.test(this.password)) this.errorMessage += 'Password should start with an uppercase alphabet. \n';
-                    if (!/(_)/.test(this.password)) this.errorMessage += 'Password should include the character "_". \n';
-                    return false;
+                    let errorMessage = 'Password invalid: \n';
+                    if (this.password.length < 8) errorMessage += 'Password length should be at least 8 characters. \n';
+                    if (this.password.length > 14) errorMessage += 'Password length should be at most 14 characters. \n';
+                    if (!/(.*[A-Z].*)/.test(this.password)) errorMessage += 'Password should include at least one uppercase alphabet character. \n';
+                    if (!/(.*[a-z].*){2,}/.test(this.password)) errorMessage += 'Password should include at least two lowercase alphabet character. \n';
+                    if (!/([0-9])/.test(this.password)) errorMessage += 'Password should include at least one numeric value. \n';
+                    if (!/(^[A-Z])/.test(this.password)) errorMessage += 'Password should start with an uppercase alphabet. \n';
+                    if (!/(_)/.test(this.password)) errorMessage += 'Password should include the character "_". \n';
+                    return errorMessage;
                 }
                 else {
-                    this.errorMessage = '';
-                    return true;
+                    return '';
                 }
 
                 /*
@@ -106,11 +120,11 @@
         },
         
 
-        watch: {
+        /*watch: {
             password() {
                 this.CheckPassword();
             }
-        }
+        }*/
 };
     
 </script>
