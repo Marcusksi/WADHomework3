@@ -15,7 +15,7 @@
       <li class="headerText"><h2>Vue + VueX homework</h2></li>
       <li class="nav-links">
         <nav>
-            <router-link to="/fetch">Main</router-link> 
+            <router-link to="/">Main</router-link> 
             <a class="mid"> | </a>
             <router-link to="/signup">Signup</router-link>
         </nav>
