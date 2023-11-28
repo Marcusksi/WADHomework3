@@ -6,7 +6,7 @@
 <!--<router-link to="/">Home</router-link> |
     <router-link to="/form">Form Val.</router-link> | -->
   <HeaderComp/>
-  <router-view />
+  <router-view class="view"/>
   <AppFooter/>
 </template>
 
@@ -31,6 +31,10 @@ export default {
   color: #2c3e50;
   margin-top: 5px;
   text-align: center;
+}
+.view{
+  position: relative;
+  padding-bottom: 100px;
 }
 /*nav{
   padding-bottom: 10px;

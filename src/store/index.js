@@ -131,7 +131,7 @@ export default createStore({
     ResetLikesAct: act => {
       setTimeout(function() {
           act.commit("ResetLikes")
-      }, 500)
+      }, 100)
     },
   },
   modules: {},

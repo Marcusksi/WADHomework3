@@ -32,5 +32,7 @@
     padding-bottom: 7px;
     padding-top: 5px;
     text-align: center;
+    position: relative;
+    bottom: 0;
   }
   </style>
