@@ -1,20 +1,20 @@
 <template>
-    <body class="signUp">
+    <body class="body">
         <section>
-            <div class="comp">
+            <div>
                 <form name="form1" action="index.html" method="get" class="form" @submit="onSubmitMethod" >
-                    <div class="subox">
-                        <div class="div1">
+                    <div class="div1">
+                        <div class="div2">
                             <p class="text">Email</p>
                             <input class="input" type="text" name="email" placeholder="Email" required><br>
                         </div>
-                        <div class="div1">
+                        <div class="div2">
                             <p class="text">Password</p>
                             <input v-model="password" class="input" type="password" name="password" placeholder="Password" required><br>
                         </div>
                         <p v-if="errorMessage" style="color:darkred">{{ errorMessage }}</p>
                     </div>
-                    <input class="signup_btn" v-on:click="passwordClick()" type="submit" value="Signup" >
+                    <input class="btn" v-on:click="passwordClick()" type="submit" value="Signup" >
                 </form>
             </div>
         </section>
@@ -22,7 +22,7 @@
 </template>
 
 <style>
-    @import '../css/signupStyle.css';
+    @import '../css/SubPage.css';
     @import '../css/style.css';
 </style>
 
@@ -128,3 +128,12 @@
 };
     
 </script>
+
+<style>
+.div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-left: 20%;
+}
+</style>

@@ -1,4 +1,4 @@
-.signUp{
+.body{
     background-color: #8FC1E3;
     text-align: center;
     padding: 10px;
@@ -30,7 +30,7 @@
     border: none;
     width: 100px;
 }
-.signup_btn{
+.btn{
     background-color: #496342;
     width: 70px;
     height: 30px;
@@ -38,21 +38,13 @@
     margin: 10px;
     border: none;
 }
-.signup_btn:hover{
+.btn:hover{
     opacity: 0.9;
     cursor:pointer;
     background-color: #7a9673;
 }
 
-.div1 {
+.div2 {
     display: flex;
     flex-direction: row;
 }
-
-.subox {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    padding-left: 20%;
-}
-

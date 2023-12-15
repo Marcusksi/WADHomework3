@@ -15,9 +15,17 @@
       <li class="headerText"><h2>Vue + VueX homework</h2></li>
       <li class="nav-links">
         <nav>
-            <router-link to="/">Main</router-link> 
+            <router-link to="/">Home</router-link> 
             <a class="mid"> | </a>
             <router-link to="/signup">Signup</router-link>
+            <a class="mid"> | </a>
+            <router-link to="AddPost">Add a Post</router-link>
+            <a class="mid"> | </a>
+            <router-link to="LogIn">Log in</router-link>
+            <a class="mid"> | </a>
+            <router-link to="APost">A post</router-link>
+            <a class="mid"> | </a>
+            <router-link to="ContactUs">Contacts</router-link>
         </nav>
       </li>
     </ul>

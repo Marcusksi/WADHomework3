@@ -25,7 +25,7 @@ app.post('/api/posts', async(req, res) => {
         console.log("a post request has arrived");
         const post = req.body;
         const newpost = await pool.query(
-            "INSERT INTO posttable(title, body, urllink) values ($1, $2, $3)    RETURNING*", [post.title, post.body, post.urllink]
+            "INSERT INTO posttable(date, body) values ($1, $2)    RETURNING*", [post.date, post.body]
         );
         res.json(newpost);
     } catch (err) {
@@ -33,7 +33,7 @@ app.post('/api/posts', async(req, res) => {
     }
 });
 
-app.get('/api/posts', async(req, res) => {
+app.get('/posts', async(req, res) => {
     try {
         console.log("get posts request has arrived");
         const posts = await pool.query(
@@ -45,7 +45,7 @@ app.get('/api/posts', async(req, res) => {
     }
 });
 
-app.get('/api/posts/:id', async(req, res) => {
+app.get('/posts/:id', async(req, res) => {
     try {
         console.log("get a post with route parameter  request has arrived");
         const { id } = req.params;
@@ -58,13 +58,13 @@ app.get('/api/posts/:id', async(req, res) => {
     }
 });
 
-app.put('/api/posts/:id', async(req, res) => {
+app.put('/posts/:id', async(req, res) => {
     try {
         const { id } = req.params;
         const post = req.body;
         console.log("update request has arrived");
         const updatepost = await pool.query(
-            "UPDATE posttable SET (title, body, urllink) = ($2, $3, $4) WHERE id = $1 RETURNING*", [id, post.title, post.body, post.urllink]
+            "UPDATE posttable SET (date, body) = ($2, $3) WHERE id = $1 RETURNING*", [id, post.date, post.body]
         );
         res.json(updatepost);
     } catch (err) {
@@ -72,7 +72,7 @@ app.put('/api/posts/:id', async(req, res) => {
     }
 });
 
-app.delete('/api/posts/:id', async(req, res) => {
+app.delete('/posts/:id', async(req, res) => {
     try {
         const { id } = req.params;
         console.log("delete a post request has arrived");
