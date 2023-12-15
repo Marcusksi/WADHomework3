@@ -1,16 +1,39 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import FetchView from "../views/FetchView.vue";
-import SignUpView from "../views/SignUpView.vue";
+import Fetch from "../views/Fetch.vue";
+import SignUp from "../views/SignUp.vue";
+import APost from "../views/APost.vue";
+import AddPost from "../views/AddPost.vue";
+import LogIn from "../views/LogIn.vue";
 
 const routes = [{
         path: "/",
         name: "fetch",
-        component: FetchView,
+        component: Fetch,
     },
     {
         path: "/signup",
         name: "signup",
-        component: SignUpView,
+        component: SignUp,
+    },
+    {
+        path: "/addpost",
+        name: "addpost",
+        component: AddPost,
+    },
+    {
+        path: "/post/:id",
+        name: "post",
+        component: APost,
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: LogIn,
+    },
+    { //will route to AllPosts view if none of the previous routes apply
+        path: "/:catchAll(.*)",
+        name: "AllPosts",
+        component: AllPosts,
     }
 ];
 

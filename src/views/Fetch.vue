@@ -1,3 +1,4 @@
+
 <template>
   <get-data :posts="posts"/>
   <button v-on:click="ResetLikes"> Reset likes </button>
